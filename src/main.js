@@ -5,9 +5,13 @@ import store from './store'
 import './registerServiceWorker'
 import './common/stylus/index.styl'
 import fastclick from 'fastclick'
+import VueLazyload from 'vue-lazyload'
 
 fastclick.attach(document.body)
 Vue.config.productionTip = false
+Vue.use(VueLazyload, {
+  loading: require('common/image/default.png')
+})
 
 new Vue({
   router,
